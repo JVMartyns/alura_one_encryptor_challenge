@@ -1,275 +1,244 @@
 * {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 150%;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 150%;
 }
 
-body, html {
-    background: #F3F5FC;
-    height: 100%;
+html {
+  height: 100%;
 }
 
 body {
-    overflow: auto;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  background: #f3f5fc;
+}
+
+.container {
+  width: 80%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .alura-logo {
-    position: relative;
-    left: 50px;
-    top: 30px;
-    width: 30px;
+  margin-left: 50px;
+  margin-top: 30px;
+  width: 30px;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    height: 90%;
+  display: flex;
+  margin-top: 30px;
+  height: 80%;
 }
 
 .input-section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 150px;
+  bottom: 20px;
+  top: 100px;
 }
 
 .input-text-area {
-    background: #F3F5FC;
-    border: none;
-    color: #0A3871;
-    margin-top: 90px;
-    text-transform: lowercase;
-    resize: none;
-    height: 100%;
+  background: #f3f5fc;
+  border: none;
+  color: #0a3871;
+  text-transform: lowercase;
+  resize: none;
+  height: 100%;
+  width: 80%;
 }
 
-.input-text-area::placeholder { 
-    color: #0A3871; 
-    text-transform: none;
+.input-text-area::placeholder {
+  color: #0a3871;
+  text-transform: none;
 }
 
 .input-text-area:focus {
-    outline: none;
+  outline: none;
 }
 
 .info p {
-    display: inline;
-    vertical-align: middle;
-    color: #495057;
-    font-size: 16px;
-    margin: 0;
+  display: inline;
+  vertical-align: middle;
+  color: #495057;
+  font-size: 16px;
+  margin: 0;
 }
 
 .buttons-div {
-    display: flex;
-    margin-top: 18px;
-    margin-bottom: 30px;
+  display: flex;
+  margin-top: 18px;
 }
 
 .btn-encrypt {
-    background: #0A3871;
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    color: white;
-    cursor: pointer;
-    height: 50px;
-    width: 250px;
-    font-size: 18px;
-    margin-right: 15px;
+  background: #0a3871;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  color: white;
+  cursor: pointer;
+  height: 67px;
+  width: 250px;
+  font-size: 18px;
+  margin: 15px;
 }
 
 .btn-decrypt {
-    background: #D8DFE8;
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    color: #0A3871;
-    cursor: pointer;
-    height: 50px;
-    width: 250px;
-    font-size: 18px;
-    margin-left: 15px;
+  background: #d8dfe8;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  color: #0a3871;
+  cursor: pointer;
+  height: 67px;
+  width: 250px;
+  font-size: 18px;
+  margin: 15px;
 }
 
 .output-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
-    border-radius: 32px;
-    position: relative;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  width: 30%;
 }
 
 .output-text-area {
-    background: white;
-    background-image: url(images/searching.png);
-    background-size: 70%;
-    background-position:center;
-    background-repeat: no-repeat;
-    border: none;
-    color: #0A3871;
-    resize: none;
-    margin: 30px 20px;
-    height: auto;
+  background: white;
+  background-image: url(images/searching.png);
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  color: #0a3871;
+  resize: none;
+  margin: 30px 20px;
+  height: 80%;
+  width: 90%;
 }
 
 .output-text-area:focus {
-    outline: none;
+  outline: none;
 }
 
 .nothing-here-message-box {
-    width: 80%;
-    position: absolute;
-    bottom: 80px;
-    text-align: center;
+  width: 80%;
+  text-align: center;
 }
 
 .nothing-here-message-box h6 {
-    color: #343A40;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 120%;
-    margin: 0;
+  color: #343a40;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 120%;
+  margin: 0;
 }
 
 .nothing-here-message-box p {
-    color: #495057;
-    font-size: 16px;
-    line-height: 120%;
-    margin: 16px 0 0 0;
+  color: #495057;
+  font-size: 16px;
+  line-height: 120%;
+  margin: 16px 0 0 0;
 }
 
 .btn-copy {
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    color: #0A3871;
-    cursor: pointer;
-    height: 50px;
-    width: 250px;
-    font-size: 18px;
-    visibility: hidden;
-    margin-bottom: 30px;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  color: #0a3871;
+  cursor: pointer;
+  min-height: 67px;
+  min-width: 250px;
+  font-size: 18px;
+  visibility: hidden;
+  margin: 15px;
 }
 
-@media screen and (max-width: 768px) {
-    .alura-logo {
-        position: none;
-        left: auto;
-        top: auto;
-        width: 30px;
-        margin: 30px 60px;
-    }
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    aspect-ratio: none;
+  }
 
-    main {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
+  main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .input-section {
-        margin: 60px;
-        height: 60%;
-    }
+  .input-section {
+    position: static;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+  }
 
-    .input-text-area {
-        margin: 0;
-        padding: 0 60px;
-    }
+  .input-text-area {
+    width: 80%;
+  }
 
-    .info p {
-        text-align: center;
-    }
+  .info {
+    align-self: flex-start;
+    margin-left: 10%;
+  }
 
-    .buttons-div {
-        justify-content: center;
-    }
+  .buttons-div {
+    margin-top: 0;
+    width: 80%;
+    justify-content: space-between;
+  }
 
-    .btn-encrypt {
-        width: 332px;
-        height: 67px;
-    }
+  .btn-decrypt,
+  .btn-encrypt {
+    margin: 0;
+    width: 48%;
+    height: 67px;
+  }
 
-    .btn-decrypt {
-        width: 332px;
-        height: 67px;
-    }
+  .output-section {
+    position: static;
+    width: 90%;
+    height: max-content;
+    margin-top: 30px;
+  }
 
-    .output-section {
-        width: 688px;
-        height: 133px;
-    }
+  .output-text-area {
+    background-image: none;
+    height: 0;
+  }
 
-    .output-text-area {
-        background-image: none;
-        margin: 0;
-        width: 90%;
-        height: 70%;
-    }
-
-    .btn-copy {
-        bottom: 30px;
-        width: 332px;
-        height: 67px;
-    }
-
-    .nothing-here-message-box {
-        position: absolute;
-        width: 624px;
-        height: 69px;
-        top: 30px;
-    }
+  .btn-copy {
+    width: 328px;
+  }
 }
 
-@media screen and (max-width: 375px) {
-    .alura-logo {
-        margin: 20px 0 0 30px;
-    }
+@media screen and (max-width: 500px) {
+  .buttons-div {
+    flex-wrap: wrap;
+  }
 
-    .input-section {
-        margin: 10px 0 30px 0;
-        height: auto;
-        padding: 0;
-        align-items: center;
-    }
-    
-    .input-text-area {
-        width: 90%;
-        height: auto;
-        padding: 20px;
-    }
+  .btn-decrypt,
+  .btn-encrypt {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
-    .buttons-div {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .btn-encrypt {
-        align-self: center;
-        margin: 0 0 10px 0;
-    }
-
-    .btn-decrypt {
-        align-self: center;
-        margin: 10px 0 0 0;
-    }
-
-    .output-section {
-        width: 327px;
-        height: 186px;
-    }
-
-    .output-text-area {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .nothing-here-message-box {
-        width: 263px;
-        height: 122px;
-    }
-
-    .btn-copy {
-        width: 279px;
-        height: 67px;
-    }
+  .btn-copy {
+    width: 90%;
+  }
 }

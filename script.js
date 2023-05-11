@@ -37,6 +37,7 @@ function decrypt(text) {
 function updateOutputSectionContent() {
     if (outputTextArea.value.length > 0) {
         outputSection.style.height = 'auto';
+        outputTextArea.style.display = 'static';
         outputTextArea.style.backgroundImage = 'none';
         nothingHereMessageBox.style.visibility = "hidden";
         btnCopy.style.visibility = "visible";
@@ -83,10 +84,6 @@ btnDecrypt.onclick = processTextToDecrypt
 
 btnCopy.onclick = function () {
     navigator.clipboard.writeText(outputTextArea.value)
-}
-
-inputTextArea.onkeyup = function () {
-    adjustTextAreaToText(this);
 }
 
 setInterval(updateOutputSectionContent, 1)
