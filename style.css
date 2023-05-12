@@ -167,12 +167,14 @@ main {
   margin: 15px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1285px) {
   .container {
     width: 100%;
     aspect-ratio: none;
   }
+}
 
+@media screen and (max-width: 1024px) {
   main {
     height: 100%;
     display: flex;

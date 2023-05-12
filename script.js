@@ -5,6 +5,7 @@ const nothingHereMessageBox = document.querySelector('.nothing-here-message-box'
 const btnEncrypt = document.querySelector('.btn-encrypt');
 const btnDecrypt = document.querySelector('.btn-decrypt');
 const btnCopy = document.querySelector('.btn-copy');
+const inputTextPattern = /^[A-z ]+$/gm
 
 const matrixCode = [
     ['e', 'enter'],
@@ -59,13 +60,16 @@ function adjustTextAreaToText(element) {
 
 function processTextToEncrypt() {
     if (inputTextArea.value.length > 0) {
-        outputTextArea.value = encrypt(inputTextArea.value.toLowerCase().trim());
-        inputTextArea.value = '';
-        updateOutputSectionContent();
-        inputTextArea.style.height = '100%';
-        adjustTextAreaToText(outputTextArea);
+        if (inputTextArea.value.match(inputTextPattern)) {
+            outputTextArea.value = encrypt(inputTextArea.value.toLowerCase().trim());
+            inputTextArea.value = '';
+            updateOutputSectionContent();
+            adjustTextAreaToText(outputTextArea);
+        } else {
+            alert('Apenas letras minúsculas e sem acento!');
+            inputTextArea.value = '';
+        }
     }
-
 }
 
 function processTextToDecrypt() {
@@ -73,7 +77,6 @@ function processTextToDecrypt() {
         outputTextArea.value = decrypt(inputTextArea.value.toLowerCase());
         inputTextArea.value = '';
         updateOutputSectionContent();
-        inputTextArea.style.height = '100%';
         adjustTextAreaToText(outputTextArea);
     }
 }
